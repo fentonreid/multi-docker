@@ -17,10 +17,10 @@ after_success:
   # Login to Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push to docker hub
-  - docker push -t fentonreid/multi-client 
-  - docker push -t fentonreid/multi-nginx 
-  - docker push -t fentonreid/multi-server
-  - docker push -t fentonreid/multi-worker
+  - docker push fentonreid/multi-client 
+  - docker push fentonreid/multi-nginx 
+  - docker push fentonreid/multi-server
+  - docker push fentonreid/multi-worker
 
 
 

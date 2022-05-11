@@ -22,15 +22,15 @@ after_success:
   - docker push fentonreid/multi-server
   - docker push fentonreid/multi-worker
 
-  # AWS deployment
-  deploy:
-    provider: elasticbeanstalk
-    region: 'eu-west-2'
-    app: 'multi-docker'
-    env: 'MultiDocker-env'
-    bucket_name: 'elasticbeanstalk-eu-west-2-046566457197'
-    bucket_path: 'docker-multi'
-    on:
-      branch: master
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
+# AWS deployment
+deploy:
+  provider: elasticbeanstalk
+  region: 'eu-west-2'
+  app: 'multi-docker'
+  env: 'MultiDocker-env'
+  bucket_name: 'elasticbeanstalk-eu-west-2-046566457197'
+  bucket_path: 'docker-multi'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
